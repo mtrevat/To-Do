@@ -3,6 +3,11 @@
 {% block content %}
     <h1>To-Do</h1>
     <hr>
+    <form method="POST" action="">
+        {{ form.hidden_tag }}
+        <p>{{ form.description.label }} {{ form.description() }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
     <ul>
         {% for task in tasks %}
         <li>{{ task.description }}</li>
