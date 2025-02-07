@@ -4,8 +4,8 @@
     <h1>To-Do</h1>
     <hr>
     <ul>
-        <li style="list-style: none;"><input type="checkbox" id="task_complete" name="task_complete"><label for="task_complete">Task 1</label></li>
-        <li style="list-style: none;"><input type="checkbox" id="task_complete" name="task_complete"><label for="task_complete">Task 2</label></li>
-        <li style="list-style: none;"><input type="checkbox" id="task_complete" name="task_complete"><label for="task_complete">Task 3</label></li>
+        {% for task in tasks %}
+        <li>{{ task.description }}</li>
+        {% endfor %}
     </ul>
 {% endblock %}
